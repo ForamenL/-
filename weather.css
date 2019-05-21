@@ -1,0 +1,423 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-image: url(images/backpic2.jpg);
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar img {
+    height: 50%;
+    padding: 1%;
+    opacity: 0.8;
+}
+
+
+.title {
+    font-size: 2rem;
+    width: 18%;
+    padding: 1%;
+    color: rgba(75, 91, 106, 1);
+    font-family: Microsoft YaHei;
+}
+
+
+.dialog {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.dialog [type="text"] {
+    width: 400px;
+    height: 40px;
+    border: rgba(92, 141, 137, 0.5) 2px solid;
+    float: left;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    outline: none;
+    font-size: 1.01rem
+}
+
+.dialog [type="button"] {
+    width: 100px;
+    height: 46px;
+    background: rgba(92, 141, 137, 0.5);
+    border: none;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    outline: none;
+    font-family: Microsoft YaHei;
+    font-size: 20px;
+}
+
+.mainbody {
+    position: absolute;
+    width: 100%;
+    font-family: Microsoft YaHei;
+}
+
+.date-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, .25) border-box;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.25);
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+
+.date,.place {
+    padding: 2%;
+    white-space: nowrap;
+}
+
+.today-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 450px;
+}
+
+.weather-condition {
+    width: 60%;
+    height: 100%;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, .25) border-box;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+
+.weather-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.day,
+.night {
+    width: 50%;
+    height: 300px;
+}
+
+.day figure figcaption,
+.night figure figcaption {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    s
+}
+
+.day figure img,
+.night figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.weather-mess {
+    height: 100px;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 60px;
+}
+
+.warmtips {
+    width: 40%;
+    font-size: 0.8rem;
+    /*background:rgba(92, 141, 137, 0.5);*/
+    height: 100%;
+    border-radius: 5px;
+    margin-left: 1%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: hsla(0, 0%, 100%, .25) border-box;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+
+.warmtips header {
+    font-size: 1.5rem;
+    color: #fc993c;
+    margin-bottom: 10px;
+}
+
+.warmtips div span {
+    font-size: 1.1rem;
+    color: #796465;
+}
+
+.warmtips p {
+    color: #000000;
+}
+
+.week-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item {
+    width: 100%;
+    margin: 1%;
+    background-color: rgba(92, 141, 137, 0.5);
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, .25) border-box;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+}
+
+.item img {
+    width: 100%;
+}
+
+.item-mess {
+    padding: 5px;
+}
+
+@media (max-width:768px) {
+    .navbar {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .dialog {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 30px;
+    }
+
+    .input-dialog {
+        width: 70%;
+        height: 100%;
+        font-size: 1.01rem
+    }
+
+    .search-btn {
+        margin-left: 2%;
+    }
+
+    .date-place {
+        font-size: 1.2rem;
+        width: 80%;
+        padding: 2%;
+    }
+
+    .date,
+    .place {
+        padding: 1%;
+    }
+
+    .today-weather {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .weather-condition {
+        width: 100%;
+    }
+
+    .weather-icon {
+        width: 100%;
+    }
+
+    .day figure,
+    .night figure {
+        margin: 10px;
+    }
+
+    .day figure img,
+    .night figure img {
+        height: 150px;
+    }
+
+    .weather-mess {
+        height: 50px;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: -30px;
+    }
+
+    .warmtips {
+        width: 90%;
+    }
+
+    .week-weather {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .item {
+        width: 40%;
+        margin: 1%;
+        background-color: rgba(92, 141, 137, 0.5);
+        color: #fff;
+        font-size: 0.9rem;
+    }
+}
+
+/*弹出城市列表*/
+div#popCity {
+    visibility: hidden;
+    font: 13px Microsoft YaHei;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    border: 1px solid #85BEE5;
+    width: 400px;
+    border-radius: 5px;
+}
+
+div#popCity h1 {
+    font-size: 14px;
+    background-color: rgba(92, 141, 137, 0.5);
+    padding: 5px;
+    color: #fff;
+}
+
+ul#popMenu {
+    margin-top: 5px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+ul#popMenu li {
+    display: block;
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+    font: 13px Microsoft YaHei;
+    border: 1px solid #85BEE5;
+    background-color: #e1effe;
+    /*padding: 2px 2px;*/
+    height: 16px;
+}
+
+ul#popMenu li.active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+div#popCityCon {
+    border-top: 1px solid #85BEE5;
+    margin-top: -1px;
+    padding: 5px 0;
+}
+
+div#popCityCon div {
+    display: none;
+}
+
+div#popCityCon div.active {
+    display: block;
+}
+
+div#popCityCon dl {
+    overflow: hidden;
+    margin: 2px 0;
+    overflow: hidden;
+}
+
+div#popCityCon dt {
+    float: left;
+    width: 50px;
+    text-align: center;
+    color: #666;
+}
+
+div#popCityCon dd {
+    float: left;
+    width: 350px;
+}
+
+div#popCityCon a {
+    cursor: pointer;
+    padding: 2px 5px;
+    color: #3b5998;
+    display: inline-block;
+}
+
+div#popCityCon a:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+div#popCityCon a.active {
+    background-color: orange;
+    color: #fff;
+}
+
+div#popCityCon div.active {
+    display: block;
+}
+
+/*搜索提示框*/
+#popList {
+    visibility: visible;
+    border: 1px solid #ccc;
+    font: 14px Microsoft YaHei;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#popList ul {
+    width: 100%;
+    list-style-type: none;
+}
+
+#popList ul li {
+    padding: 5px;
+    margin-left: -40px;
+}
+
+#popList ul li:hover {
+    background-color: #ececec;
+    cursor: default;
+}
+
+#popList ul li.active {
+    background-color: #ececec;
+    cursor: default;
+}
